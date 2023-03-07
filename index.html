@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nhập database</title>
+        <link rel="stylesheet" href="./assets/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" placeholder="địa điểm" class="diaDiem" />
+            <input type="number" placeholder="giá vé" class="giaVe" />
+            <input type="text" placeholder="phần giới thiệu" class="gioThieu" />
+            <input type="number" placeholder="giá vé cũ" class="giaCu" />
+            <input
+                type="text"
+                placeholder="ngày khởi hành"
+                class="ngayXuatPhat"
+            />
+            <input
+                type="number"
+                placeholder="số lượng vé tối đa"
+                class="soLuong"
+            />
+            <input
+                type="number"
+                placeholder="số lượng vé đã đặt"
+                class="daDat"
+            />
+            <select name="phuongTien" class="phuongTien">
+                <option value="car">car</option>
+                <option value="bus">bus</option>
+                <option value="motobike">motobike</option>
+            </select>
+            <textarea
+                placeholder="tiêu chuẩn của tour"
+                name="tieuChuan"
+                class="tieuChuan"
+                cols="30"
+                rows="10"
+            ></textarea>
+            <textarea
+                placeholder="tất cả ảnh của tour"
+                name="imgsTour"
+                class="imgsTour"
+                cols="30"
+                rows="10"
+            ></textarea>
+            <input type="number" placeholder="số ngày đi" class="soNgay" />
+            <div class="inforTour"></div>
+            <button class="submit">Xác nhận</button>
+        </div>
+        <script type="module" src="./assets/main.js"></script>
+    </body>
+</html>

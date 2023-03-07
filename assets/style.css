@@ -1,0 +1,36 @@
+.inforTour,
+.container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.phuongTien {
+    width: 100%;
+    font-size: 18px;
+}
+
+.submit {
+    outline: none;
+    border: none;
+    background-color: #e32020;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 14px auto;
+    padding: 8px 0;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.submit:hover {
+    opacity: 0.8;
+    transition: all ease-in-out 0.3s;
+}
+
+input {
+    width: 100%;
+    font-size: 18px;
+    margin: 4px auto;
+}
