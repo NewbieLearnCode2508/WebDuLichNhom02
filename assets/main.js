@@ -14,14 +14,20 @@ let btn = document.querySelector(".submit");
 let days = 0;
 let flag = "";
 
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+    });
+});
+
 function addInforPlace() {
     days = soNgay.value;
     if (days > 0) {
         for (let i = 1; i <= days; i++) {
             flag += `
-                    <input type="text" placeholder="địa điểm của ngày${i}" class="ngay${i}" />
-                    <input type="text" placeholder="hình ảnh của ngày ${i}" class="imgNgay${i}" />
-                    <input type="text" placeholder="giới thiệu của ngày ${i}" class="gthieuNgay${i}" />
+                    <input type="text" placeholder="địa điểm của ngày${i}" class="day ngay${i}" />
+                    <input type="text" placeholder="hình ảnh của ngày ${i}" class="day imgNgay${i}" />
+                    <input type="text" placeholder="giới thiệu của ngày ${i}" class="day gthieuNgay${i}" />
                 `;
         }
         inforTour.innerHTML = flag;
@@ -86,6 +92,12 @@ function pushDataToServer(obj) {
             tieuChuan.value = "";
             imgsTour.value = "";
             inforTour.innerHTML = "";
+            setTimeout(() => {
+                document.body.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }, 1000);
         })
         .catch(() => {
             alert("chưa update dữ liệu được");
