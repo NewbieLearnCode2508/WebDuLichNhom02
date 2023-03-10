@@ -14,12 +14,6 @@ let btn = document.querySelector(".submit");
 let days = 0;
 let flag = "";
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-    });
-});
-
 function addInforPlace() {
     days = soNgay.value;
     if (days > 0) {
@@ -66,6 +60,7 @@ function setDataValue() {
             };
             obj.chuongTrinh.push(objFlag);
             pushDataToServer(obj);
+            obj = {}
         }
     }
 }
