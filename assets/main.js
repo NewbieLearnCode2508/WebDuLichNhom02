@@ -59,9 +59,9 @@ function setDataValue() {
                 gthieuNgay: gthieuNgay.value,
             };
             obj.chuongTrinh.push(objFlag);
-            pushDataToServer(obj);
-            obj = {}
         }
+        pushDataToServer(obj);
+        obj = {}
     }
 }
 
